@@ -1,0 +1,85 @@
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --muted: #64748b;
+  --ok-bg: #ecfdf5;
+  --ok-br: #6ee7b7;
+  --bad-bg: #fef2f2;
+  --bad-br: #fecaca;
+  --ring: #38bdf8;
+  --gap: 12px;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3 { color: #2c3e50; }
+section { margin: 16px 0; }
+
+button {
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  transition: all .15s ease;
+  font-weight: bold;
+}
+button:hover { background: #f1f5f9; }
+
+/* Status Button */
+#zooStatusBtn[data-status="open"] { background: var(--ok-bg); border-color: var(--ok-br); }
+#zooStatusBtn[data-status="closed"] { background: var(--bad-bg); border-color: var(--bad-br); }
+
+/* Visitor Counter */
+#visitorCount {
+  display: inline-block;
+  min-width: 2.2ch;
+  padding: 6px 10px;
+  margin: 0 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Cards & Layout */
+.card, .formCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+input, select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.msg { color: #2e7d32; font-weight: 500; min-height: 24px; }
+.msg.err { color: #d32f2f; }
