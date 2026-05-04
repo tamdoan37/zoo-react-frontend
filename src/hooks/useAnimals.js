@@ -8,7 +8,7 @@ export const useAnimals = () => {
   useEffect(() => {
     const fetchAnimals = async () => {
       try {
-        const response = await fetch( 'https://zoo-backend-olyp.onrender.com/api/animals');
+        const response = await fetch( 'https://zoo-api-dotnet.onrender.com/api/animals');
         if (!response.ok) throw new Error('Failed to fetch animals');
         const data = await response.json();
         setAnimals(data.sort((a, b) => a.name.localeCompare(b.name)));
